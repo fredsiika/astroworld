@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>AstroWorld | Recreation of the 1979 Atari Asteroids Game</title>
@@ -7,8 +8,12 @@
 </head>
 
 <body>
+    <div class="header">
+        <h1>AstroWorld</h1>
+        <p>Recreation of the 1979 Atari Asteroids Game</p>
+    </div>
     <canvas id="gameCanvas" width="760" height="570"></canvas>
-    
+
     <script>
         const FPS = 30; // frames per second
         const FRICTION = 0.7; // friction coefficient of space (0 = no friction, 1 = lots of friction)
@@ -133,13 +138,13 @@
             textAlpha = 1.0;
         }
 
-        function keyDown(/** @type {KeyboardEvent} */ ev) {
+        function keyDown( /** @type {KeyboardEvent} */ ev) {
 
             if (ship.dead) {
                 return;
             }
 
-            switch(ev.keyCode) {
+            switch (ev.keyCode) {
                 case 32: // space bar (shoot laser)
                     shootLaser();
                     break;
@@ -155,13 +160,13 @@
             }
         }
 
-        function keyUp(/** @type {KeyboardEvent} */ ev) {
+        function keyUp( /** @type {KeyboardEvent} */ ev) {
 
             if (ship.dead) {
                 return;
             }
 
-            switch(ev.keyCode) {
+            switch (ev.keyCode) {
                 case 32: // space bar (allow shooting again)
                     ship.canShoot = true;
                     break;
@@ -280,7 +285,7 @@
                 y = roids[i].y;
                 offs = roids[i].offs;
                 vert = roids[i].vert;
-                
+
                 // draw the path
                 ctx.beginPath();
                 ctx.moveTo(
@@ -306,7 +311,7 @@
                     ctx.stroke();
                 }
             }
-            
+
             // thrust the ship
             if (ship.thrusting && !ship.dead) {
                 ship.thrust.x += SHIP_THRUST * Math.cos(ship.a) / FPS;
@@ -339,7 +344,7 @@
                 ship.thrust.x -= FRICTION * ship.thrust.x / FPS;
                 ship.thrust.y -= FRICTION * ship.thrust.y / FPS;
             }
-            
+
             // draw the triangular ship
             if (!exploding) {
                 if (blinkOn && !ship.dead) {
@@ -389,7 +394,7 @@
                 ctx.arc(ship.x, ship.y, ship.r, 0, Math.PI * 2, false);
                 ctx.stroke();
             }
-            
+
             // show ship's centre dot
             if (SHOW_CENTRE_DOT) {
                 ctx.fillStyle = "red";
@@ -530,7 +535,7 @@
 
             // move the lasers
             for (var i = ship.lasers.length - 1; i >= 0; i--) {
-                
+
                 // check distance travelled
                 if (ship.lasers[i].dist > LASER_DIST * canv.width) {
                     ship.lasers.splice(i, 1);
@@ -588,4 +593,5 @@
         }
     </script>
 </body>
+
 </html>
