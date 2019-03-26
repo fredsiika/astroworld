@@ -3,30 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>AstroWorld | Recreation of the 1979 Atari Asteroids Game</title>
+    <title>🚀 AstroWorld | Recreation of the 1979 Atari Asteroids Game</title>
     <style></style>
 </head>
 
 <body>
     <div class="header">
-        <h1>AstroWorld</h1>
+        <h1>AstroWorld 🚀</h1>
         <p>Recreation of the 1979 Atari Asteroids Game</p>
     </div>
-    <canvas id="gameCanvas" width="760" height="570"></canvas>
+    <canvas id="gameCanvas" width="1500" height="570"></canvas>
 
     <script>
-        const FPS = 30; // frames per second
+        const FPS = 40; // frames per second
         const FRICTION = 0.7; // friction coefficient of space (0 = no friction, 1 = lots of friction)
         const GAME_LIVES = 3; // starting number of lives
         const LASER_DIST = 0.6; // max distance laser can travel as fraction of screen width
         const LASER_EXPLODE_DUR = 0.1; // duration of the lasers' explosion in seconds
-        const LASER_MAX = 10; // maximum number of lasers on screen at once
+        const LASER_MAX = 20; // maximum number of lasers on screen at once
         const LASER_SPD = 500; // speed of lasers in pixels per second
         const ROID_JAG = 0.4; // jaggedness of the asteroids (0 = none, 1 = lots)
         const ROID_PTS_LGE = 20; // points scored for a large asteroid
         const ROID_PTS_MED = 50; // points scored for a medium asteroid
         const ROID_PTS_SML = 100; // points scored for a small asteroid
-        const ROID_NUM = 3; // starting number of asteroids
+        const ROID_NUM = 10; // starting number of asteroids
         const ROID_SIZE = 100; // starting size of asteroids in pixels
         const ROID_SPD = 50; // max starting speed of asteroids in pixels per second
         const ROID_VERT = 10; // average number of vertices on each asteroid
@@ -41,6 +41,7 @@
         const SHOW_CENTRE_DOT = false; // show or hide ship's centre dot
         const TEXT_FADE_TIME = 2.5; // text fade time in seconds
         const TEXT_SIZE = 40; // text font height in pixels
+        
 
         /** @type {HTMLCanvasElement} */
         var canv = document.getElementById("gameCanvas");
