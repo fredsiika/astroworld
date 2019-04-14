@@ -1,7 +1,7 @@
 # Astroworld
 **Recreation of the 1979 Atari game Asteroids from scratch using vanilla JavaScript.**
 
-### [Click Here to play](https://fredsiika.github.io/fredsiika/astroworld)
+### [Click Here to play](https://fredsiika.github.io/astroworld/)
 
 Asteroids is probably the grandfather of arcade games as it is the most influential release and the one the triggered the Golden Age of Arcade Games. Released back in 1979 for the arcade systems, the game was later ported to Atari 2600 due to its popularity. 
 
