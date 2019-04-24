@@ -4,7 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <title>🚀 AstroWorld | Recreation of the 1979 Atari Asteroids Game</title>
-    <style></style>
+    <style>
+        body{
+            color: rgb(94, 94, 94);
+            background-color: darkgrey;
+            font-weight: 400;
+            font-family: "Nunito Sans", -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Ariel, sans-serif;
+            line-height: 1.6;
+            font-size: 1.4rem;
+        }
+        #gameCanvas{
+            box-shadow: 0px 6px 16px 0px;
+            display: flex;
+            margin-left: 200px;
+            margin-right: 200px;
+            
+        }
+        .header {
+            text-align: center;
+        }
+        .footer{
+            color: #777;
+            padding: 10px 15px;
+            height: 20px;
+            text-align: center;
+            border-top: 1px solid #e6e6e6;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,7 +39,9 @@
         <p>Recreation of the 1979 Atari Asteroids Game</p>
     </div>
     <canvas id="gameCanvas" width="760" height="570"></canvas>
-
+    <footer>
+        <p>@Copyright Fred Siika</p>
+    </footer>
     <script>
         const FPS = 60; // frames per second
         const FRICTION = 0.7; // friction coefficient of space (0 = no friction, 1 = lots of friction)
